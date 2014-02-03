@@ -1,21 +1,36 @@
 package com.nickbunich.convconv.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * User: Nick Bunich
  * Date: 2/3/14
  * Time: 2:40 AM
  */
+
+@Document
 public class Song {
 
-    public String name;
-    public String artist;
+    @Id
+    private String id;
+    private String title;
+    private String artist;
 
-    public String getName() {
-        return name;
+    public String getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getArtist() {
