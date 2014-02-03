@@ -18,6 +18,12 @@ public class IndexController {
     @RequestMapping(method = RequestMethod.GET)
     public String sayHello(ModelMap model) {
         model.addAttribute("message", "It's working!");
-        return "index";
+        return "main/index";
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test(ModelMap model) {
+        model.addAttribute("message", "It's working!");
+        return "test";
     }
 }

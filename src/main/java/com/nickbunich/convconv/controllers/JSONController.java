@@ -1,6 +1,7 @@
 package com.nickbunich.convconv.controllers;
 
 import com.nickbunich.convconv.model.Song;
+import org.apache.commons.lang.math.NumberUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,7 @@ public class JSONController {
 
         Song song = new Song();
         song.setName(name);
-        song.setArtist("Unknown Artist");
+        song.setArtist(String.valueOf(NumberUtils.isNumber("234234.2342")));
 
         return song;
 
