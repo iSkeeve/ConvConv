@@ -24,7 +24,7 @@
         </div>
     </div>
 </div>
-
+<tiles:insertAttribute name="sidebar"/>
 </body>
 <tiles:insertAttribute name="footer"/>
 </html>
